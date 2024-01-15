@@ -1,0 +1,51 @@
+.button {
+    text-align: center;
+    min-height: 100px;
+    min-width: 150px;
+    height: 15vh;
+    margin: 5% 0% 5% 0%;
+}
+
+.topArtists {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    max-width: 100%;
+}
+
+.RecommendedArtists {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.tableDiv {
+    margin: 1%;
+    border-color: #b3b3b3;
+    table-layout: fixed;
+    width: 90%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.display th, .display td {
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    margin: 5%;
+    width: auto;
+    /* padding: 1%; */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.return {
+    margin-top: 10%;
+}
