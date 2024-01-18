@@ -55,17 +55,12 @@ def get_token():
 
 @app.route("/callback", methods=['POST'])
 def createToken():
-    # client_id = "a3bb5d38c9e74401b2419ddf61cc4900"
-    # client_secret = "828655be211448b880d4bec5cd426252"
-    # encoded = base64.b64encode(f"{client_id}:{client_secret}".encode()).decode('utf-8')
-    # print(encoded)
     auth_code = request.json.get('code')
     if not auth_code:
         return jsonify({'error': 'Authorization code needed'}), 400
 
     print(auth_code)
     # Make the API request to spotify
-    # print(os.environ.get('CLIENT_CREDENTIALS'))
     response = requests.post('https://accounts.spotify.com/api/token', 
                              headers={
                                         'Authorization': 'Basic ' + os.environ.get('CLIENT_CREDENTIALS')
@@ -132,9 +127,3 @@ def getRecommendedArtists():
 init_db()
 if __name__ == '__main__':
     app.run(debug=True)
-
-# client_id = os.getenv('CLIENT_ID')
-# client_secret = os.getenv('CLIENT_SECRET')
-
-# print(client_id)
-# print(client_secret)
